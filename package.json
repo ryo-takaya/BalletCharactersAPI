@@ -7,7 +7,7 @@
     "dev": "nodemon ./bin/www",
     "migrate": " knex migrate:latest",
     "Rollback":"knex migrate:rollback ",
-    "seed":"run knex seed:make"
+    "seed":"run knex seed:run"
   },
   "repository": "https://github.com/ryoutaka/BalletCharactersAPI.git",
   "dependencies": {
