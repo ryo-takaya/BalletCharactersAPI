@@ -22,14 +22,6 @@ const createContent = (array)=>{
 
 
 
-
-
-
-
-
-
-
-
 //------------------------------------------------------get
 async function get(url){
  
