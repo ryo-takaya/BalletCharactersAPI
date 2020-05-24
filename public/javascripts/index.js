@@ -42,13 +42,13 @@ getBotton.addEventListener('click',async ()=>{
   let url 
 
   if(name !== '' && limit !== 0){
-    url = `http://localhost:3000/v1/characters/${name}/?limit=${limit}`
+    url = `http://localhost:3000/characters/${name}/?limit=${limit}`
   }else if(name !== ''){
-    url = `http://localhost:3000/v1/characters/${name}`
+    url = `http://localhost:3000/characters/${name}`
   }else if(limit !== 0){
-    url = `http://localhost:3000/v1/characters?limit=${limit}`
+    url = `http://localhost:3000/characters?limit=${limit}`
   }else{
-    url = `http://localhost:3000/v1/characters`
+    url = `http://localhost:3000/characters`
   }
   
   const result =  await get(url)
@@ -61,7 +61,7 @@ getBotton.addEventListener('click',async ()=>{
 })
 //--------------------------------------------------post
 async function post(name,title,type){
-  return await fetch(`http://localhost:3000/v1/characters`,{
+  return await fetch(`http://localhost:3000/characters`,{
     method:'POST',
     body: JSON.stringify({
       name,
@@ -94,7 +94,7 @@ postBotton.addEventListener('click',async ()=>{
 })
 //-----------------------------------------------put
 async function put(name,title_value,type_value,target){
-  return await fetch(`http://localhost:3000/v1/characters/${target}`,{
+  return await fetch(`http://localhost:3000/characters/${target}`,{
     method:'PUT',
     body: JSON.stringify({
       name,
@@ -134,7 +134,7 @@ putBotton.addEventListener('click',async ()=>{
 
 //-----------------------------------------------------
 async function del(target){
-  return await fetch(`http://localhost:3000/v1/characters/${target}`,{
+  return await fetch(`http://localhost:3000/characters/${target}`,{
     method:'DELETE',
     headers: {
       "Content-Type": "application/json"
