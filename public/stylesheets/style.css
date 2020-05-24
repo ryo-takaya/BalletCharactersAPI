@@ -6,9 +6,16 @@ body {
 a {
   color: #00B7FF;
 }
+#main_form{
+  display: flex;
+}
 tr{
   margin:70px ;
 }
 td{
   font-size: 20px;
+}
+
+.form{
+  margin: 0 30px;
 }

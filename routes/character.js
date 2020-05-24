@@ -37,8 +37,9 @@ router.get('/:name',(req,res)=>{
   .from('characters')
   .where({name})
   .then(result => {
+   
     res.status(200)
-    res.send({character:result[0]})
+    res.send({characters:result})
   })
   .catch(err =>{
    res.status(400)
@@ -49,7 +50,9 @@ router.get('/:name',(req,res)=>{
 
 
 router.post('/',(req,res)=>{
+ 
   const {name,title,type} = req.body
+  console.log(name,title,type)
   knex('characters')
   .insert({
     name,
@@ -67,10 +70,7 @@ router.post('/',(req,res)=>{
            })
   }).then(result=>{
     res.status(201)
-    res.render('index', {
-      title: 'charcter',
-      content:result
-      });
+    res.send({characters:result})
   })
  
 })
@@ -95,7 +95,7 @@ router.put('/:name',(req,res)=>{
   })
   .then((result)=>{
     res.status(201)
-    res.send({character:result[0]})
+    res.send({characters:result})
   })
   .catch(err=>{
     res.send(err)
@@ -109,13 +109,16 @@ router.delete('/:name',async (req,res)=>{
   const result = await knex
                        .select('*')
                        .from('characters')
-                       .where({name:para})   
+                       .where({name:para})
+                       .catch(()=>{
+                         res.status(404)
+                       }) 
 
    await knex('characters')
         .where({name:para})
         .del()
-  res.status(201)
-  res.send({character:result[0]})
+  res.status(200)
+  res.send({characters:result})
 })
 
 module.exports = router;
