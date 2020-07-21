@@ -1,21 +1,25 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  background: rgba(245, 196, 196, 1);
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 30px;
 }
 
-a {
-  color: #00B7FF;
-}
-#main_form{
+#main_form {
   display: flex;
+  justify-content: space-around;
 }
-tr{
-  margin:70px ;
+tr {
+  margin: 70px;
 }
-td{
+td {
   font-size: 20px;
 }
 
-.form{
+.form {
   margin: 0 30px;
+}
+
+.small_margin_bottom {
+  margin-bottom: 10px;
 }

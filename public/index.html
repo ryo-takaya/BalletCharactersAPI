@@ -5,29 +5,41 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1>Characters</h1>
+    <h1>BalletCharactersAPI</h1>
 
     <h2>Plase enter your request</h2>
     <div id="main_form">
       <div id="get" class="form">
-        get <br />
-        name: <input type="text" name="name" id="get_name" /><br />
+        <h2>get</h2>
+        name:
+        <input
+          class="small_margin_bottom"
+          type="text"
+          name="name"
+          id="get_name"
+        /><br />
         limit: <input type="text" name="name" id="get_limit" /><br />
         <br />
         <input type="submit" id="get_send" />
       </div>
 
       <div id="post" class="form">
-        post
-        <input type="text" name="name" id="post_input" /><br />
-        <select name="title" id="post_title">
+        <h2>post</h2>
+        <input
+          class="small_margin_bottom"
+          type="text"
+          name="name"
+          id="post_input"
+        /><br />
+        <select class="small_margin_bottom" name="title" id="post_title">
           <option value="SleepingBeauty">SleepingBeauty</option>
           <option value="Nut Cracker">Nut Cracker</option>
           <option value="Swan Lake">Swan Lake</option>
           <option value="Dragon Quest">Dragon Quest</option>
           <option value="La Sylphide">La Sylphide</option>
         </select>
-        <select name="type" id="post_type">
+        <br />
+        <select class="small_margin_bottom" name="type" id="post_type">
           <option value="human">human</option>
           <option value="bird">bird</option>
           <option value="fairy">fairy</option>
@@ -37,17 +49,30 @@
       </div>
 
       <div id="put" class="form">
-        put <br />
-        beforename: <input type="text" name="name" id="search_input" /><br />
-        aftername: <input type="text" name="name" id="put_name" /><br />
-        <select name="title" id="put_title">
+        <h2>put</h2>
+        beforename:
+        <input
+          class="small_margin_bottom"
+          type="text"
+          name="name"
+          id="search_input"
+        /><br />
+        aftername:
+        <input
+          class="small_margin_bottom"
+          type="text"
+          name="name"
+          id="put_name"
+        /><br />
+        <select class="small_margin_bottom" name="title" id="put_title">
           <option value="SleepingBeauty">SleepingBeauty</option>
           <option value="Nut Cracker">Nut Cracker</option>
           <option value="Swan Lake">Swan Lake</option>
           <option value="Dragon Quest">Dragon Quest</option>
           <option value="La Sylphide">La Sylphide</option>
         </select>
-        <select name="type" id="put_type">
+        <br />
+        <select class="small_margin_bottom" name="type" id="put_type">
           <option value="human">human</option>
           <option value="bird">bird</option>
           <option value="fairy">fairy</option>
@@ -57,8 +82,13 @@
       </div>
 
       <div id="delete" class="form">
-        delete <br />
-        <input type="text" name="name" id="delete_target" /><br />
+        <h2>delete</h2>
+        <input
+          class="small_margin_bottom"
+          type="text"
+          name="name"
+          id="delete_target"
+        /><br />
         <input type="submit" id="delete_send" />
       </div>
     </div>
