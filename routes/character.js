@@ -4,7 +4,7 @@ let router = express.Router();
 
 /* GET home page. */
 router.get("/", (req, res, next) => {
-  console.log("uuuu");
+  console.log("dddd");
   const limit = req.query.limit;
   if (limit === undefined) {
     knex
@@ -27,6 +27,7 @@ router.get("/", (req, res, next) => {
 });
 
 router.get("/:name", (req, res) => {
+  console.log("aaaaa");
   const name = req.params.name;
 
   knex
@@ -38,8 +39,9 @@ router.get("/:name", (req, res) => {
       res.send({ characters: result });
     })
     .catch((err) => {
+      console.log("???????");
       res.status(400);
-      res.send("not found character");
+      res.send("wwww");
     });
 });
 
